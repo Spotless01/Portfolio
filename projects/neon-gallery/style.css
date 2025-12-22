@@ -1,0 +1,152 @@
+/* ----- NEON THEME ----- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    background: radial-gradient(circle at top, #0a021a, #000);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 35px 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: cyan;
+    text-shadow: 0 0 15px cyan, 0 0 35px #0ff;
+}
+
+/* GLOW BOX WRAPPER */
+.glow-box {
+    width: fit-content;
+    margin: 10px auto;
+    padding: 8px 15px;
+    border-radius: 12px;
+    background: rgba(0,255,255,0.05);
+    box-shadow: 0 0 10px cyan, inset 0 0 10px cyan;
+}
+
+/* FILTER BUTTONS */
+.filter-btns { display:flex; gap: 15px; }
+.btn {
+    background: transparent;
+    border: 2px solid cyan;
+    padding: 8px 20px;
+    cursor: pointer;
+    color: cyan;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn:hover, .btn.active {
+    background: cyan;
+    color: #000;
+    box-shadow: 0 0 20px cyan;
+}
+
+/* SEARCH BAR */
+.search-box input {
+    width: 300px;
+    background: transparent;
+    padding: 10px;
+    outline:none;
+    border:2px solid cyan;
+    border-radius:8px;
+    color:#0ff;
+    text-align:center;
+    font-size: 15px;
+}
+
+/* GALLERY GRID */
+.gallery {
+    width: 85%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 18px;
+}
+
+.gallery .item {
+    position: relative;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+    transition: .4s;
+}
+
+/* HOVER EFFECT — 3D TILT NEON */
+.gallery .item:hover img {
+    transform: scale(1.1) rotateY(8deg);
+    box-shadow: 0 0 25px cyan;
+}
+
+/* LIGHTBOX */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 70%;
+    max-height: 80%;
+    border-radius: 10px;
+    border: 2px solid #0ff;
+    box-shadow: 0 0 20px #0ff;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background: #111;
+    border: 2px solid #0ff;
+    border-radius: 6px;
+    color: #0ff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #0ff;
+    color: #111;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: crimson;
+    padding: 8px 16px;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/* FOOTER */
+footer {
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    border-top:1px solid cyan;
+    font-size:14px;
+    opacity:.8;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio</title>
+  <meta name="description" content="Emmanuels's purpose-driven digital systems, crafted for clarity and longevity." />
+  <meta name="theme-color" content="#071224" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Fav / Icon (inline svg fallback) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text x=%222%22 y=%2212%22 font-size=%2212%22>✦</text></svg>">
+
+</head>
+<body>
+
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Loader -->
+  <div id="loader" role="status" aria-live="polite">
+    <div class="loader-inner">
+      <svg class="loader-logo" viewBox="0 0 60 60" width="56" height="56" aria-hidden="true">
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0" stop-color="#00f5ff"/>
+            <stop offset="1" stop-color="#7c4dff"/>
+          </linearGradient>
+        </defs>
+        <circle cx="30" cy="30" r="26" stroke="url(#g)" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="loader-text">Initializing Identity…</span>
+    </div>
+  </div>
+
+  <!-- Announcement region for screen readers -->
+  <div id="sr-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Top controls -->
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand" aria-hidden="true">
+        <svg viewBox="0 0 36 36" width="36" height="36"><circle cx="18" cy="18" r="16" fill="url(#brandGrad)"/></svg>
+        <span class="brand-text">Portfolio</span>
+      </div>
+
+      <div class="header-actions" role="toolbar" aria-label="top controls">
+        <button id="theme-toggle" class="icon-btn" aria-pressed="false" title="Toggle theme">🌓</button>
+        <a class="social-link" href="#" aria-label="View GitHub" title="GitHub" target="_blank" rel="noopener">GH</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main id="main" class="container main-stage hidden" tabindex="-1">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-visual" aria-hidden="true">
+        <div class="blob"></div>
+      </div>
+
+      <div class="hero-content">
+        <h1 id="hero-title" class="hero-title">I am <span id="typed-name" aria-live="polite"></span><span id="type-cursor" aria-hidden="true">▌</span></h1>
+
+        <p class="hero-subtitle">
+          I don’t just build projects. I design systems, meaning, and future-ready ideas — clarity before complexity.
+        </p>
+
+        <div class="hero-ctas">
+          <button class="enter-btn" id="enter-btn">Enter My World</button>
+          <a class="secondary-btn" href="#projects" id="jump-projects">See Projects</a>
+        </div>
+
+        <p class="hero-meta">Available for select collaborations · <button id="contact-copy" class="link-btn">Copy contact</button></p>
+      </div>
+    </section>
+
+    <section id="profile" class="profile-section">
+      <div class="avatar-wrapper" aria-hidden="false">
+         <img
+          src="images/spotless01-avatar.webp"
+          alt="Portrait of Spotless01"
+          class="avatar"
+          width="300"
+          height="300"
+          loading="eager"
+        /></div>
+
+      <div class="profile-copy">
+        <h1>Emmanuel Sennie Mieza</h1>
+        <p>Email: emmanuelmieza01@gmail.com</p>
+        <p>Mobile: +233 551 836 194; +233 504 796 215</p>
+      </div>
+    </section>
+
+    <!-- Identity -->
+    <section class="identity card reveal" aria-labelledby="identity-heading">
+      <h2 id="identity-heading">Identity Snapshot</h2>
+      <ul class="identity-list">
+        <li><strong>Role:</strong> Web Developer & Systems Designer</li>
+        <li><strong>Focus:</strong> Purpose-driven digital systems</li>
+        <li><strong>Skills:</strong> HTML · CSS · JavaScript · Accessibility</li>
+        <li><strong>Vision:</strong> Build things that outlive trends</li>
+      </ul>
+
+      <div class="identity-actions">
+        <button class="dive-btn" id="dive-btn">Dive Deep</button>
+        <a class="link-muted" href="#philosophy">My Philosophy →</a>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects reveal" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Explore Built Projects</h2>
+
+      <div class="projects-grid" role="list">
+        <article class="project-card interactive"
+                 role="listitem"
+                 tabindex="0"
+                 data-room="gallery-room"
+                 data-src="projects/neon-gallery/index.html"
+                 aria-describedby="p1-desc">
+          <div class="project-thumb neon-thumb" aria-hidden="true"><img src="images/gallery-thumb.png" alt="thumbnail" class="thumbn"></div>
+          <div class="project-body">
+            <h3>Neon Image Gallery</h3>
+            <p id="p1-desc">Immersive futuristic visual experience.</p>
+            <span class="view-hint">Enter Room →</span>
+          </div>
+        </article>
+
+        <article class="project-card interactive"
+                 role="listitem"
+                 tabindex="0"
+                 data-room="calculator-room"
+                 data-src="projects/voice-calculator/index.html"
+                 aria-describedby="p2-desc">
+          <div class="project-thumb calc-thumb" aria-hidden="true"><img src="images/calc-thumb.png" alt="thumbnail" class="thumbn"></div>
+          <div class="project-body">
+            <h3>Voice-Controlled Calculator</h3>
+            <p id="p2-desc">Hands-free interaction meets computation.</p>
+            <span class="view-hint">Enter Room →</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section id="philosophy" class="philosophy reveal" aria-labelledby="phil-heading">
+      <h2 id="phil-heading">Philosophy</h2>
+      <blockquote>
+        “Anyone can write code. Very few can design intention.”
+      </blockquote>
+    </section>
+
+    <footer class="footer reveal" aria-labelledby="footer-heading">
+      <p id="footer-heading">© 2025 Emmanuel Sennie Mieza — Designed with purpose.</p>
+    </footer>
+
+  </main>
+
+  <!-- DIGITAL ROOMS (lazy-loaded) -->
+  <section class="digital-room hidden" id="gallery-room" aria-hidden="true" aria-label="Neon gallery room">
+    <div class="room-ui">
+      <button class="exit-room" aria-label="Exit room">✕</button>
+    </div>
+    <iframe class="project-frame" title="Neon Image Gallery" data-src="projects/neon-gallery/index.html" loading="lazy"></iframe>
+  </section>
+
+  <section class="digital-room hidden" id="calculator-room" aria-hidden="true" aria-label="Calculator room">
+    <div class="room-ui">
+      <button class="exit-room" aria-label="Exit room">✕</button>
+    </div>
+    <iframe class="project-frame" title="Voice Controlled Calculator" data-src="projects/voice-calculator/index.html" loading="lazy"></iframe>
+  </section>
+
+  <!-- Scripts -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>
